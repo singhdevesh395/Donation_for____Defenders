@@ -1,0 +1,121 @@
+img{
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+/* body{
+    background-image: url("India-Flag-Background-Png-Image.png");
+} */
+
+nav{
+    background-color: #FF9933;
+    margin: 0;
+}
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar-brand, .nav-link{
+    color: #fff;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    /* transform: scale(1.1); */
+    color: #000080;
+}
+
+/* mainbody ////////////////////////////////////*/
+
+.tiranga{
+    width: 100%;
+    /* height: 50%; */
+    z-index: -2;
+    position: absolute;
+}
+
+.alpha{
+    padding: 3% 15%;
+    margin-top: 13%;
+}
+
+.card{
+    height: 100%;
+}
+
+h3{
+    color: #cc6600;
+    text-align: center;
+}
+
+.beta{
+    padding: 3% 15%;
+}
+
+.img1{
+    height: 70%;
+}
+
+.member, .events{
+    margin-bottom: 10%;
+}
+
+/* guidelines */
+.guidelines{
+    padding: 7% 15%;
+    color: #138808;
+}
+
+
+/* footer */
+.footer{
+    margin-top: 5%;
+    background-color: #138808;
+    padding: 1% 20%;
+    text-align: center;
+    background-image: url("https://2.bp.blogspot.com/-E6Q7Mh-W82w/XFk1UqrKOAI/AAAAAAAAJgA/FzQP42jDCFU9wqfHN8SUAL6QlTeMWD1QgCLcBGAs/s1600/TIRANGA%2BPNG%2BFILE.png");
+}
+
+h2{
+    color: #fff;
+    margin: 5rem 2rem 2rem;
+}
+
+.footer-icon {
+    color: #fff;
+    margin: 1rem;
+}
+
+.footer-icon:hover{
+    color: #000080;
+    transform: scale(1.5);
+}
+
+.btn2{
+    background-color: #fff;
+}
+
+.btn1{
+    display: block;
+    align-items: center;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.card-body1{
+    padding: 7%;
+}
+
+.alerts-box{
+    background-color: #FF9933;
+}
+
+.btn4{
+    border-radius: 0;
+}

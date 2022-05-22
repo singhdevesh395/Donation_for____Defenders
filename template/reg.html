@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/loginstyles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-social.css' %}">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </section>
+
+        <div class="container mt-5"><br><br><br>
+            <h1 style="color: #138808;">Register</h1>
+          
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="card">
+                  <div class="card-body">
+          
+                    <!-- Makes POST request to /register route -->
+                    <form action="/register" method="POST">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="username">Username</label>
+                        <input class="form-control" name="username" required type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Enter Password</label>
+                        <input type="password" class="form-control" name="password1">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" class="form-control" name="password2">
+                      </div>
+                      <input style="background-color: #138808" type="submit" class="btn btn-dark" value="Register">
+
+
+
+               <!--       {% csrf_token %}
+                    <input class="field" name="username" required type="text" placeholder="Username" />
+                    <input class="field" name="email" required type="email" placeholder="myusername@domain.com" />
+                    <input id="p1" class="field" name="password1" required type="password" placeholder="Password" onchange="form1.p2.pattern=this.value;" />
+                    <input id="p2" class="field" name="password2" required type="password" placeholder="Rewrite Password" required />
+                    <input type="submit"  value="Sign Up" />
+
+               -->
+
+
+
+
+
+                    </form>
+                    <div>
+                      <h3>
+                          {% for message in messages %}
+                          {{message}}
+                          {% endfor %}
+                      </h3>
+                  </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <a class="btn btn-block btn-social btn-google" href="" role="button">
+                      <i class="fab fa-google"></i>
+                      Sign Up with Google
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <a class="btn btn-block btn-social btn-facebook" href="" role="button">
+                      <i class="fab fa-facebook"></i>
+                      Sign Up with Facebook
+                    </a>
+                  </div>
+              
+                </div>
+              </div>
+          
+            </div>
+          </div>
+    </body>
+
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

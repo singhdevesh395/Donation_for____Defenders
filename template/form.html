@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/form.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-social.css' %}">
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+      <section id="nav">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                </li>
+                <!--   <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>-->
+                <li class="nav-item active">
+                    <a class="nav-link" href="donate">Participate <span class="sr-only">(current)</span></a>
+                </li>
+                {% if  user.is_authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                </li>
+                {% else %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+            </ul>
+            </div>
+        </nav>
+    </section>
+
+<div class="row form-box">
+  <div class="column">
+        <div class="container mt-5"><br><br><br>
+            <h1 style="color: #138808;">&nbsp &nbsp Donate</h1>
+          
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+          
+                    <!-- Makes POST request to /register route -->
+                    <form action="donate" method="POST">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="name" class="form-control" name="fname">
+                      </div>
+                      <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="name" class="form-control" name="lname">
+                      </div>
+                      <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="name" class="form-control" name="organization">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="text" class="form-control" name="phonenumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" class="form-control" name="address1">
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address Line 2</label>
+                        <input type="text" class="form-control" name="address2">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" >
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" name="state" >
+                    </div>
+                      <div id="idSectionDonationFormContainer" class="sectionOuterContainer">
+        <div id="idAmountEditContainer" class="fieldContainer groupContainer donationAmountContainer">
+          <div class="fieldSubContainer radioGroupContainer">
+            
+            <div class="fieldLabel">
+              <span  >*</span><strong ><span >Predefined choice (INR)</span></strong>
+            </div>
+            
+            <div class="fieldBody">
+              <div >
+                <div class="fieldItem donationAmount">
+                  <span class="typeRadioContainer">
+                    <input  type="radio"  checked="checked" class="typeRadio">
+                  </span>
+                  <span class="label">
+                    <label ><span class="donationAmountTextLine">Enter your own amount&nbsp;</span></label>
+                    <input  type="text" maxlength="9"  class="typeTextBox typeText" name="amount">
+                    <span  class="validationError" style="display:none;">Amount is in invalid format</span>
+                  </span>
+                </div>
+            
+          </div>
+        </div>
+      <br>
+        <div id="idCommentEditContainer" class="fieldContainer textFieldContainer">
+          <div class="fieldSubContainer multiLinesContainer">
+            <table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="left">
+            <div class="fieldLabel">
+              <span >Comment</span>
+            </div>
+          </td><td class="right">
+            <div class="fieldBody">
+              <textarea  rows="6" cols="70"  class="typeText" name="comments"></textarea><span class="mandatory" style="display:none;"><br>Length limit exceeded.</span><input type="hidden" >
+            </div>
+            </td></tr></tbody></table>
+          </div>
+        </div>
+    <br>
+        <button style="background-color: #138808;" type="submit" class="btn btn-success btn1">Donate</button>
+      </form>
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+    </body>
+
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

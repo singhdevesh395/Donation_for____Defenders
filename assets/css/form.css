@@ -1,0 +1,127 @@
+nav{
+    background-color: #FF9933;
+    margin: 0;
+    z-index: 2;
+}
+
+body{
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.39)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar-brand, .nav-link{
+    color: #fff;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    /* transform: scale(1.1); */
+    color: #000080;
+}
+
+.guideline-bg {
+    padding: 10px;
+   
+}
+
+/* about */
+.about{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 7% 15%;
+}
+
+
+
+
+/* footer */
+.footer{
+    background-color: #138808;
+    padding: 1% 20%;
+    text-align: center;
+}
+
+h3{
+    color: #fff;
+    margin: 5rem 2rem 2rem;
+}
+
+.footer-icon {
+    color: #fff;
+    margin: 1rem;
+}
+
+.footer-icon:hover{
+    color: #000080;
+    transform: scale(1.5);
+}
+
+.column {
+  float: left;
+  width: 57%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* .row {
+    padding: 7% 15%;
+} */
+
+.column{
+    width: 100%;
+}
+
+.mt-5{
+    width: 100%;
+}
+
+.right{
+    padding: 0 5%;
+    right: auto;
+}
+
+.left{
+    padding: 0 3%;
+    width: 15rem;
+}
+
+.textLine, .donationAmountTextLine{
+    padding-left: 1rem;
+}
+
+.fieldLabel, .fieldItem{
+    padding: 2px 2rem;
+}
+
+.typeText{
+    margin-left: 1rem;
+}
+
+.fieldLabel{
+    margin-top: 0;
+    padding: 0;
+}
+
+.col-sm-12{
+    z-index: 0;
+}
+
+.btn1{
+    margin-left: 34%;
+    margin-top: 4rem;
+    width: 33%;
+}

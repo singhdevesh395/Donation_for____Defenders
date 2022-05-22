@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/monthlyDonationForm.css' %}">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!--   <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                </div>
+             
+            </nav>
+           
+         
+        </section>
+        
+        <section id="form">
+            <div class="form-div">
+            
+                <h1 style="text-align: center; color: #138808;">Fundraiser Form</h1><br>
+                    <form action="fund" class="card" method="POST">
+                        {% csrf_token %}
+                    <div class="form-group col-md-12">
+                        <label for="name">Full Name</label>
+                        <input class="form-control" type="text" id="name" name="name" placeholder="Enter full name">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="address">Address</label>
+                        <input class="form-control" type="text" id="Address" name="address" placeholder="Enter address">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group col-md-6 left">
+                            <label for="mobile">Mobile no.</label>
+                            <input class="form-control" type="text" id="mobile" name="phn"    placeholder="Enter mobile no.">
+                        </div>
+                        <div class="form-group col-md-6 left">
+                            <label for="profession">Profession</label>
+                            <input class="form-control"  name="pro" type="text" id="profession" placeholder="Enter your Profession">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4 left">
+                            <label for="city">City</label>
+                            <input class="form-control" name="city" type="text" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="form-group col-md-4 left">
+                            <label for="mobile">State</label>
+                            <input class="form-control"  name="state" type="text" id="state" placeholder="Enter your state">
+                        </div>
+                        <div class="form-group col-md-4 left">
+                            <label for="zip">zip</label>
+                            <input class="form-control"  name="zp" type="text" id="zip" placeholder="Enter your zip">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="mobile">In future which kind of events would you like to arrage :</label>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <input type="checkbox" id="cb1">
+                                <label for="cb1">Car Wash</label>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <input type="checkbox" id="cb1">
+                                <label for="cb1">Auction</label>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <input type="checkbox" id="cb1">
+                                <label for="cb1">Bake Sale</label>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <input type="checkbox" id="cb1">
+                                <label for="cb1">S</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="form-group col-md-12">
+                        <button  style="background-color: #138808;" class="btn btn-outline-primary btn-lg">Submit</button>
+                    </div>
+                    <br>
+                    <!-- <div class="form-group col-sm-12">
+                        <p>*Please note that all donations will be created to the organisation funds.<br>*We will remind you 5 days before last date of month.<br>*You will get notifications in e-mail if any event is organised near you.</p>
+                    </div> -->
+                </form>
+            </div>
+        </section>
+
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

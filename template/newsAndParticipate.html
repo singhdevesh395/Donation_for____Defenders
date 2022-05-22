@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!--   <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                </div>
+            </nav>
+        </section>
+
+        <section id="news">
+            <hr style="width: 80%;">
+            <div class="row news-box-top">
+                <div class="col-lg-4 news-headline">
+                    <h1><strong>News Headline here</strong></h1><br>
+                    <p>Sub headline of news heading</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+                <div class="col-lg-8 img1">
+                    <img src="https://thumbs.dreamstime.com/b/silhouette-indian-army-statue-india-flag-monument-twilight-shimla-himachal-pradesh-168950637.jpg" alt="">
+                </div>
+            </div>
+            <div class="row news-box-2">
+                <div class="col-lg-6 img2-box">
+                    <img class="img2" src="https://static.toiimg.com/thumb/msid-73058977,width-1200,resizemode-4/73058977.jpg" alt=""><br><br>
+                    <h1><strong>News Headline here</strong></h1><br>
+                    <p>Sub headline of news heading</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+                <div class="col-lg-6 img3-box">
+                    <img class="img3" src="https://national.janamtv.com/wp-content/uploads/2020/05/indian-army-2-780x470.jpg" alt=""><br><br>
+                    <h1><strong>News Headline here</strong></h1><br>
+                    <p>Sub headline of news heading</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+            </div>
+            <hr style="width: 80%;">
+            <div class="row news-box-3">
+                <div class="col-lg-3">
+                    <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-86010,resizemode-1,msid-72058231/news/defence/wildcraft-india-bags-a-deal-to-make-rucksacks-for-the-indian-army/1.jpg" alt="i1">
+                </div>
+                <div class="col-lg-9"><br>
+                    <h4>news heading</h4>
+                    <p>news wagerah blah blah blah.....</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+            </div>
+            <hr style="width: 60%;">
+            <div class="row news-box-3">
+                <div class="col-lg-3">
+                    <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-86010,resizemode-1,msid-72058231/news/defence/wildcraft-india-bags-a-deal-to-make-rucksacks-for-the-indian-army/1.jpg" alt="i1">
+                </div>
+                <div class="col-lg-9"><br>
+                    <h4>news heading</h4>
+                    <p>news wagerah blah blah blah.....</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+            </div>
+            <hr style="width: 60%;">
+            <div class="row news-box-3">
+                <div class="col-lg-3">
+                    <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-86010,resizemode-1,msid-72058231/news/defence/wildcraft-india-bags-a-deal-to-make-rucksacks-for-the-indian-army/1.jpg" alt="i1">
+                </div>
+                <div class="col-lg-9"><br>
+                    <h4>news heading</h4>
+                    <p>news wagerah blah blah blah.....</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+            </div>
+            <hr style="width: 60%;">
+            <div class="row news-box-3">
+                <div class="col-lg-3">
+                    <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-86010,resizemode-1,msid-72058231/news/defence/wildcraft-india-bags-a-deal-to-make-rucksacks-for-the-indian-army/1.jpg" alt="i1">
+                </div>
+                <div class="col-lg-9"><br>
+                    <h4>news heading</h4>
+                    <p>news wagerah blah blah blah.....</p>
+                    <a href="" class="btn btn-sm btn-outline-danger">continue reading</a>
+                </div>
+            </div>
+            <hr style="width: 80%;">
+        </section>
+   
+<section id="footer">
+    <div class="touch footer">
+        <h3>GET IN TOUCH WITH US</h3>
+        <form class="form " method="post" action="feedback">
+          {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-4 form-group">
+                    <input type="name" class="form-control"  name="name" placeholder="Your Name">
+                </div>
+                <div class="col-lg-4 form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+                </div>
+                <div class="col-lg-4 form-group">
+                    <input type="text" class="form-control"   name="subject" placeholder="Subject">
+                </div>
+                <div class="col-lg-12 form-group">
+                    <textarea name="message" class="form-control" placeholder="Your message" id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <button  type="submit" class="btn btn-outline-success btn-lg">SUBMIT</button>
+        </form>
+    </div>
+
+    <div class="container-fluid footer">
+        <a href=""><i class="footer-icon fab fa-twitter " aria-hidden="true"></i></a>
+        <a href=""><i class="footer-icon fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href=""><i class="footer-icon fab fa-instagram" aria-hidden="true"></i></a>
+        <a href=""><i class="footer-icon fas fa-envelope" aria-hidden="true"></i></a>
+    </div>
+</section> 
+</body>
+
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,45 @@
+.creators{
+    /* text-align: center; */
+    padding: 7% 15%;
+    background-color: #d6d6d6;
+}
+
+.creator-img{
+    width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.col-lg-2{
+    object-fit: contain;
+}
+
+.puneet, .prashant, .akshat, .om{
+    padding: 5%;
+    background-color: #fff;
+    border-radius: 1%;
+    margin: 2%;
+}
+
+table{
+    margin: 7% auto;
+    max-width: auto;
+    height: auto;
+    font-size: 1.5rem;
+}
+
+.col-lg-8{
+    align-content: centerS;
+}
+
+td{
+    padding: 1%;
+}
+
+.ftco-section {
+    padding: 7em 0;
+    position: relative; }
+    @media (max-width: 767.98px) {
+      .ftco-section {
+        padding: 6em 0; } }
+  

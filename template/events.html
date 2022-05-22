@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/events.css' %}">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                 <!--   <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                </div>
+            </nav>
+            <br><br>
+        </section>
+
+        <section id="Events">
+            <div class="heading-box" style="background-color: rgb(251, 223, 170);padding: 1.5rem 7% 0.1rem;"><p style="font-size: 2rem;">Fundraising Events</p></div>
+            <div class="events">
+                <div class="row">
+                    <div class="eb1 col-lg-6">
+                        <img src="https://gumlet.assettype.com/nationalherald/2018-12/9feba577-654b-4724-a9f0-aec1101fd682/bjp_begs_for_money_in_indian_armys_name.jpg?w=1200&h=667" alt="">
+                    </div>
+                    <div class="eb2 col-lg-6">
+                        <h2>Join the Fund raising Army.</h2><br>
+                        <p>The Donate for Defenders Charity Fundraising Army is growing from strength to strength with more fundraisers than ever taking up the challenge and rising through the ranks!</p>
+                        <a href="participate" class="btn btn-warning btn-lg">Start Now - It's Free</a>
+                    </div>
+                </div><br><br>
+                <hr>
+                <div class="row example-box" style="padding: 2rem 0;">
+                    <div class="col-sm-12" style="margin: 0 0 2rem;"><h2>Some examples of Fundraising Events</h2></div>
+                    <div class="col-sm-4">
+                        <ul>
+                         <a href="#dance"> <li>Dance Night</li></a>
+                         <a href="#relay">  <li>Relay Race</li></a>
+                            <a href="#bowling">   <li>Bowling Tournament</li></a>
+                                <a href="#surf">  <li>Surf Tournament</li></a>
+                                    <a href="#afternoon"> <li>Afternoon Tea Time</li></a>
+                                        <a href="#basketball"> <li>Basketball Tournament</li></a>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <a href="#treadmill">  <li>Treadmill Relay</li></a>
+                            <a href="#dinner"> <li> Dinner Party</li></a>
+                            <a href="#excercise"> <li>Exercise Lessons</li></a>
+                            <a href="#fashion"><li>Fashion Show</li></a>
+                            <a href="#movie"><li>Movie Night</li></a>
+                            <a href="#bbq"><li>BBQ Throwdown</li></a>
+                        </ul>                        
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <a href="#eating"> <li>Eating Contests</li></a>
+                            <a href="#ice"> <li>Ice Cream Social</li></a>
+                            <a href="#silent"><li>Silent Auction</li></a>
+                            <a href="#indoor"><li>Indoor Cycling</li></a>
+                            <a href="#local"><li>Local Concert</li></a>
+                            <a href="#bake"><li>Bake-off</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class='explain' style="margin-top: 4rem;">
+                   <a id="dance"> <div class="col-lg-8" ><h2>Dance Night</h2><br></a>
+                        <p>This is a fun and great way to showcase local talent while raising money for a charity or cause at the same time. Choosing a location, such as a restaurant or bar that usually has live music, is a good option seeing as all the equipment is already there. The venue chosen will have food and drinks, so no need to worry about catering the event. Try and find an owner that has an attachment or sympathizes with your cause so they will either donate or charge a reduced fee for renting, food and beverages. Just as with the movie or karaoke night fundraiser, it is a good idea to choose a quiet night so that they will be more motivated to help you raise money for your charity. Seeing as you are providing the bar or restaurant with a lot of business, part of the proceeds from food and beverages purchased can go to support the cause. With a free MyEvent.com website, bands can easily register to perform online. Guests will be able to learn about the performing bands and purchase their Battle of the Bands Fundraising fundraiser tickets online from the same free website. You can sell tickets online in advance, or charge more at the door, where all proceeds are donated to the cause. Promoting through YouTube and Facebook is a great way to build awareness about the fundraising event. The winning band will win a prize. Sponsorships opportunities and packages can also be featured and purchased on your free MyEvent.com website.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <a id="local">  <div class="col-lg-8" ><h2>Local Concert</h2><br></a>
+                        <p>This idea for a fundraiser is for all the live music junkies out there. Partner with a local venue and recruit local artists into your show. They can even start fundraising pages leading up to the event so that fans, friends, and family can donate even if they can’t attend.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <div class="col-lg-8" ><a id="indoor">   <h2>Indoor Cycling</h2><br></a>
+                        <p>Popularly known as “Spinning,” this indoor activity asks riders to sweat for a cause. Partner with a local gym or Spin studio and ask your contacts to participate for a suggested donation. You could even ask a local instructor to donate their time and lead the class through a workout. To jazz up the event, throw in mood lighting, a killer playlist, and excessive fist-pumping for an awesome ride.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <a id="silent">    <div class="col-lg-8" ><h2>Silent Auction</h2><br></a>
+                        <p>Plan a silent auction as a solo event, or add it to an existing fundraising initiative as a supplementary revenue driver. While you should reach out to your own network to start assembling items, consider appointing a committee of volunteers that can also solicit their contacts for gifts to auction off. Get creative with the prizes you collect—note that certain prizes, such as travel-related items and outings, tend to be popular.
+
+                        </p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <a id="ice">   <div class="col-lg-8" ><h2>Ice Cream Social</h2><br></a>
+                        <p>This fundraising event idea is perfect for families and children. Ask your community and local businesses to donate supplies, get the word out, and charge per scoop day-of. Consider adding an ice cream eating contest into the mix. This type of event would be ideal on a weekend or in the summer when families have more free time on their hands.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="eating">   <div class="col-lg-8" ><h2>Eating Contests</h2><br></a>
+                        <p>You can alternatively ditch the ice cream and open up your fundraiser to all types of eating contests. Whether you serve pies, doughnuts, or hot dogs, contestants can pay an entry fee to compete. Solicit local shops or bakeries to donate the food that will be devoured at your tasty fundraiser.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="bbq">    <div class="col-lg-8" ><h2>BBQ Throwdown</h2><br></a>
+                        <p>Invite your neighborhood chefs to cook up their best plate of barbecue for bragging rights, and ask guests to donate, taste, and cast their votes for their top choice.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="fashion">    <div class="col-lg-8" ><h2>Fashion Show</h2><br></a>
+                        <p>To launch this idea to raise money for your mission, partner with a local venue and sell event tickets. Ask participants to create their own sartorial masterpieces, or reach out to local clothing shops and boutiques for donated outfits. You can also ask makeup artists to donate their services and recruit community members to volunteer as models.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="movie">   <div class="col-lg-8" ><h2>Movie Night</h2><br></a>
+                        <p>Host a film screening or movie marathon at a local park or auditorium and sell tickets and snacks for suggested donations. Another twist to this familiar fundraising event is to ask friends and family to each host their own mini-film screenings on behalf of your cause and invite their networks. They can then speak about your mission afterward and take note of those who want to learn more.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="bowling">  <div class="col-lg-8" ><h2>Bowling Tournament</h2><br></a>
+                        <p>Each team fundraises a minimum amount for entry. You could also recruit partners to sponsor lanes where they can put up their logos. Check the link below to read how one Big Brothers Big Sisters affiliate leveraged Classy to raise 436 percent more for their annual bowling tournament year-over-year.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="basketball">   <div class="col-lg-8" ><h2>Basketball Tournament</h2><br></a>
+                        <p>Teams pay an entry fee or fundraise to participate. You can also weave in other basketball games like dunk contests, free-throw contests, or dribble challenges.
+
+                        </p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="treadmill">    <div class="col-lg-8" ><h2>Treadmill Relay</h2><br></a>
+                        <p>Partner with a local gym to get this fundraising event idea up and running (pun intended). Ask supporters and community members to sign up for a time slot (minimum of 15 minutes) and donate at least $1 per minute. You can even make this into a team event by assigning a different treadmill to each team.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="excercise">    <div class="col-lg-8" ><h2>Exercise Lessons</h2><br></a>
+                        <p>Whether you focus on yoga, tennis, or self-defense, host an afternoon where participants can donate to receive a lesson. To find an instructor, reach out to experts at local gyms or studios who might be interested in donating their skills for a good cause.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="dinner">    <div class="col-lg-8" ><h2> Dinner Party</h2><br></a>
+                        <p>This fundraising event idea can turn into a themed party for any occasion. Whether you host a harvest dinner or a cocktail event, sell tickets and invite guests over to a rented venue, a volunteered home, or your office for a delicious meal. Prepare your elevator pitch so that guests will understand how meaningful this dinner, and their contributions, truly are.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="afternoon">   <div class="col-lg-8" ><h2>Afternoon Tea Time</h2><br></a>
+                        <p>Put on a fundraising event where people can relax, drink tea, and support your worthy cause. Attendees can dress up for your classy high-tea fundraiser and pay an entry fee. Prepare elegant cutlery, fine china, and snacks. You can partner with a local tea or coffee shop for tea leaves and pastries.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    <a id="surf">   <div class="col-lg-8" ><h2>Surf Tournament</h2><br></a>
+                        <p>If you’re by the ocean, a surf competition can be the perfect fundraising event idea to draw beach-loving crowds. When it comes to sports events, ask participants to create peer-to-peer campaigns to raise a minimum to participate. Include impact blocks on your campaign page to help tie the fundraising goal to its impact; for example, have participants raise $1,500 to cover the cost of sending one cancer survivor to camp.
+
+                            Not near the coast? Lakes are perfect for athletic events too. Plan a kayak race or a relay swim to take advantage of the great outdoors.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                    
+                    <a id="relay">    <div class="col-lg-8" ><h2>Relay Race</h2><br></a>
+                        <p>Put a fresh spin the traditional 5K or 10K and turn it into a team relay race. Runners can solicit their networks for donations. Perhaps each leg of the race demands a particular costume theme or humorous obstacle—one leg could even be a three-legged race.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <a id="bake">   <div class="col-lg-8" ><h2>Bake-off</h2><br></a>
+                        <p>Get ready for some sweet smells with this fundraising event idea. Participants compete to bake the most delectable treat out there, and guests can donate for the chance to taste test and vote for their favorites. You can narrow down eligible entries by pastry type, whether that’s pies, cakes, cookies, brownies, or some other sweet concoction. Whatever you serve, make sure you follow any local food serving laws.
+
+                        </p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                </div>
+                <hr>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="touch footer">
+                <h3>GET IN TOUCH WITH US</h3>
+                <form class="form ">
+                    <div class="row">
+                        <div class="col-lg-4 form-group">
+                            <input type="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-lg-4 form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <textarea name="" class="form-control" placeholder="Your message" id="" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success btn-lg">SUBMIT</button>
+                </form>
+            </div>
+
+            <div class="container-fluid footer">
+                <a href=""><i class="footer-icon fab fa-twitter " aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fab fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </section> 
+
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

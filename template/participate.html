@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!--   <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                </div>
+            </nav>
+        </section>
+        <br> 
+        <br>
+
+       
+        <section id="join">
+            <div class="join-div">
+                <h1 style="margin-bottom: 0;">Get Involved</h1>
+                <p style="font-size: 1.5rem; margin-top: 0;">Two ways to make change</p>
+            </div>
+            <div class="row join-div2">
+                <div class="col-lg-6">
+                    <img src="https://i1.wp.com/www.directrelief.org/wp-content/uploads/DSC01726-e1563956101181.jpg?resize=800%2C450px&ssl=1" alt="">
+                    <br>
+                    <br>
+                    <h6>Invest in healthier world</h6>
+                    <a href="don" class="btn btn-danger" style="width: 100%;">Donate Monthly</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://i1.wp.com/www.directrelief.org/wp-content/uploads/Louisiana-Floods-Volunteers-143-e1563956074605.jpg?resize=800%2C450px&ssl=1" alt="">
+                    <br>
+                    <br>
+                    <h6>Invest in healthier world</h6>
+                    <a href="fund" class="btn btn-danger" style="width: 100%;">Become a fundraiser</a>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+
+        <section id="RecieveAlerts">
+            <div class="alerts-box" style="padding: 3% 15%;">
+                <h1 style="color: #fff; text-align: center;" >Receive Alerts</h1>
+                    <form action="" class="form-inline">
+                        <div class="col-lg-6 form-group" style="padding: 1rem;">
+                            <input type="email" class="form-control" placeholder="Your E-mail here" style="width: 100%;">
+                        </div>
+                        <div class="col-lg-6" style="padding: 1rem;">
+                            <button class="btn btn-success" style="width: 100%;">SIGN UP</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>

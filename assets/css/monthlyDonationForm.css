@@ -1,0 +1,53 @@
+img{
+    overflow: hidden;
+}
+
+nav{
+    background-color: #FF9933;
+    margin: 0;
+}
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar-brand, .nav-link{
+    color: #fff;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    /* transform: scale(1.1); */
+    color: #000080;
+}
+
+/*/////////////////////////////////////// form-styles ////////////////////////////*/
+
+.form-div{
+    padding: 7% 15%;
+}
+
+form{
+    padding: 5%;
+}
+
+.left{
+    padding: 0 2rem;
+}
+
+
+.btn-outline-primary{
+    color: #fff;
+    border-color: #fff;
+    width: 33%;
+    margin-left: 33%;
+}
+
+.btn-outline-primary:hover{
+    color: white;
+    background-color: #fff;
+    border-color: #fff;
+}

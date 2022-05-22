@@ -1,0 +1,43 @@
+nav{
+    background-color: #FF9933;
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.39)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar-brand, .nav-link{
+    color: #fff;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    /* transform: scale(1.1); */
+    color: #000080;
+}
+
+
+/* other */
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
